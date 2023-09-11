@@ -1,2 +1,1 @@
-Nice to hear from you!
-Good to meet you.
+Glad to meet you.
