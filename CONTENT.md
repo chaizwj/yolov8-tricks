@@ -1,2 +1,1 @@
-wmCeQxY75je
-UUUPDAte.json
+sX1278-TEST-CODe
