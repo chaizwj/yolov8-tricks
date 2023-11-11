@@ -1,0 +1,372 @@
+
+.search-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-box{
+    display: flex;
+    width: 35%;
+}
+.search-bar input {
+    border: 1px solid #F80;
+    width: 80%;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.search-bar button {
+    width: 20%;
+    border: 1px solid #F80;
+    background-color: #F80;
+    color: #fff;
+    line-height: 28px;
+    margin-left: -6px;
+    border-radius: 0 .25rem .25rem 0;
+    height: 28px;
+}
+
+#complete-box{
+    margin-top: 28px;
+    position: absolute;
+    z-index: 99;
+    text-align: left;
+    border: 1px solid #f1f1f2;
+    width: 336px;
+    height: 120px;
+    background-color: #fff;
+}
+#complete-box div{
+    padding-left: 7px;
+}
+
+.btn {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-family: "Arial", "PingFang SC", "Microsoft Yahei", "SimSun", sans-serif;
+    color: #FFF;
+    background: #F80;
+    border-color: #F80;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+em {
+    color: red;
+    font-style: normal;
+}
+
+.selected {
+    color: red;
+}
+
+.filter-list {
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.filter-box {
+    display: flex;
+    align-content: center;
+    position: relative;
+    line-height: 24px;
+}
+
+.f-key {
+    font-size: 12px;
+    color: #666;
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    line-height: 100%;
+}
+.column-divider{
+    width: 2px;
+    border-radius: 1px;
+    box-shadow: 1px 0 0 rgba(0,0,0,.2) inset,-1px 0 0 rgba(255,255,255,.2) inset;
+}
+.row-divider{
+    margin: auto;
+    width: 98%;
+    border-radius: 1px;
+    height: 3px;
+    box-shadow:0 1px 0 rgba(0,0,0,.2) inset,0 -1px 0 rgba(255,255,255,.2) inset;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:hover {
+    color: #F80;
+}
+
+.f-items {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.f-item {
+    width: 80px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.btn-arrow{
+    border-radius: 3px;
+}
+.btn-arrow,
+.btn-arrow:visited,
+.btn-arrow:link,
+.btn-arrow:active {
+    width: 46px;
+    height: 23px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    line-height: 23px;
+    font-family: "\5b8b\4f53";
+    text-align: center;
+    font-size: 16px;
+    color: #AAA;
+    text-decoration: none;
+    out-line: none
+}
+
+.btn-arrow:hover {
+    background-color: #FF8800;
+    color: whitesmoke;
+}
+
+.sort-item {
+    display: inline;
+    width: 50px;
+    float: left;
+    font-size: 13px;
+}
+
+.selected-ops {
+    display: flex;
+    align-items: center;
+}
+
+.open {
+    font-size: 12px;
+    margin-left: 10px;
+    line-height: 24px;
+    margin-bottom: 3px;
+}
+
+.selected-op {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 10px;
+    line-height: 16px;
+    background: #fff;
+    padding: 0px 5px 1px;
+}
+
+.selected-op:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.selected-op span {
+    color: red;
+    cursor: pointer;
+}
+
+.close {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.top-ban {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-pagination {
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    text-transform: uppercase;
+}
+
+.top-pagination span {
+    margin-right: 10px;
+}
+
+
+body {
+    background-color: #fcfcfc;
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.star-name {
+    width: 50px;
+    text-align: center;
+    font: 12px/1.5 tahoma, arial, 'pingfang sc', 'Hiragino Sans GB', \5b8b\4f53, sans-serif;
+    background-color: #fe7a6b;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 2px 5px;
+    zoom: 1;
+}
+.hotel-info {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#hotel-price {
+    font-weight: bold;
+    font-size: 24px;
+    color: #f60;
+    padding-right: 2px;
+    font-family: 'Helvetica Neue', 'Arial', 'PingFang SC', 'Microsoft Yahei', 'SimSun', sans-serif;
+}
+
+.hotel-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Arial", "PingFang SC", "Microsoft Yahei", "SimSun", sans-serif;
+    line-height: 26px;
+}
+
+.hotel-score {
+    font-size: 14px;
+    color: #365873;
+    font-weight: 700;
+    font: arial, 'pingfang sc', 'Hiragino Sans GB', \5b8b\4f53, sans-serif
+}
+
+.hotel-list {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 100%;
+}
+.hotel-list span{
+    font-size: 12px;font: arial,'pingfang sc','Hiragino Sans GB',\5b8b\4f53,sans-serif
+}
+.order {
+    color: #2bba9e; cursor: default; font: 12px/1.5 tahoma,arial,'pingfang sc','Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+.address {
+    margin-bottom: 10px;font: 12px/1.5 tahoma,arial,'pingfang sc','Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+
+.hotel-box {
+    padding: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-box:hover {
+    box-shadow: 0 1px 3px 1px rgba(245, 131, 8, 0.3);
+}
+
+.fixed-map {
+    position: fixed;
+    top: 0;
+}
+
+.map-box {
+    background-color: #fff;
+    color: #666;
+    width: 360px;
+    height: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.map-head {
+    line-height: 35px;
+}
+
+.amap {
+    width: 100%;
+    height: 350px;
+}
+
+.marker-label{
+    font-size: 12px;
+}
+.marker {
+    position: absolute;
+    top: -25px;
+    right: -100px;
+    color: #fff;
+    padding: 4px 10px;
+    box-shadow: 1px 1px 1px rgba(10, 10, 10, .2);
+    white-space: nowrap;
+    font-size: 12px;
+    font-family: "";
+    background-color: #25A5F7;
+    border-radius: 3px;
+}
+
+em{
+    color: red;
+}
+.ad-mark {
+    position: absolute;
+    left: 5px;
+    top: 0;
+}
+.ad-mark img{
+    filter: drop-shadow(1px 2px 1px rgba(0,0,0,.3))
+}
+
+.map-geo{
+    position: relative;
+    bottom: 35px;
+    left: 310px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url(https://a.amap.com/jsapi/static/image/plugin/locate.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 5px silver;
+}
+
+.map-geo img {
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    margin: 4px;
+    border-radius: 50%;
+    -webkit-animation: rotate 2s linear infinite;
+}
