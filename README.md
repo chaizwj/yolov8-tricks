@@ -1,2 +1,0 @@
-Abgabe_Scrabble
-websiteyuh
