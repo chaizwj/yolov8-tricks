@@ -1,1 +1,1 @@
-How wonderful to meet you!
+Abgabe_Scrabble
