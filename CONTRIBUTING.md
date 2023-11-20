@@ -1,2 +1,1 @@
-:cold_sweat:
-get_tweets
+It was lovely meeting you.
