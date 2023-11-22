@@ -1,1 +1,1 @@
-It was lovely meeting you.
+Nice to hear from you!
