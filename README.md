@@ -1,1 +1,1 @@
-Nice meeting you.
+openvas-exporter
