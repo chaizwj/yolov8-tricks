@@ -1,1 +1,1 @@
-Thanks for getting in touch!
+I’m looking forward to working with you.
