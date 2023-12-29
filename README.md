@@ -1,2 +1,1 @@
-aLY
-It was nice meeting you.
+Thanks for getting in touch!
