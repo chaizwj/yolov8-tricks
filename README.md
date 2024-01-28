@@ -1,2 +1,1 @@
-GqlKF
-It was lovely meeting you!
+It’s lovely to meet you.
