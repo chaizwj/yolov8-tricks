@@ -1,1 +1,2 @@
 lKGqYW2Cad
+FCitx
