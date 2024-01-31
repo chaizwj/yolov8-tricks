@@ -1,2 +1,0 @@
-lKGqYW2Cad
-FCitx
