@@ -1,1 +1,1 @@
-:right_anger_bubble:
+It is fun chatting with you.
