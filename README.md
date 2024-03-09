@@ -1,2 +1,1 @@
-:collision:
-It’s very nice meeting you.
+Glad to meet you.
