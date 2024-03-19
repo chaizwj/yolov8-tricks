@@ -1,1 +1,1 @@
-It is fun chatting with you!
+I had a great time!
