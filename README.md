@@ -1,1 +1,2 @@
 weather_reports
+FRIDAY
