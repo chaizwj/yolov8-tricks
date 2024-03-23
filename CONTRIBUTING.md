@@ -1,1 +1,1 @@
-:monocle_face:
+lJsW
