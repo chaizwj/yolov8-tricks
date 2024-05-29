@@ -1,2 +1,1 @@
-It’s very nice to meet you!
-PRACTICEChallenges
+Good to meet you!
