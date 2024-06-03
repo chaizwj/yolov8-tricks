@@ -1,1 +1,1 @@
-It is fun talking to you!
+I can’t wait to catch up with you again.
