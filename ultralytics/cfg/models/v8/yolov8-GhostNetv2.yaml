@@ -1,0 +1,50 @@
+# Parameters
+nc: 80  # number of classes
+scales: # model compound scaling constants, i.e. 'model=yolov8n.yaml' will call yolov8.yaml with scale 'n'
+  # [depth, width, max_channels]
+  n: [0.33, 0.25, 1024]  # YOLOv8n summary: 225 layers,  3157200 parameters,  3157184 gradients,   8.9 GFLOPs
+  s: [0.33, 0.50, 1024]  # YOLOv8s summary: 225 layers, 11166560 parameters, 11166544 gradients,  28.8 GFLOPs
+  m: [0.67, 0.75, 768]   # YOLOv8m summary: 295 layers, 25902640 parameters, 25902624 gradients,  79.3 GFLOPs
+  l: [1.00, 1.00, 512]   # YOLOv8l summary: 365 layers, 43691520 parameters, 43691504 gradients, 165.7 GFLOPs
+  x: [1.00, 1.25, 512]   # YOLOv8x summary: 365 layers, 68229648 parameters, 68229632 gradients, 258.5 GFLOPs
+
+# YOLOv8.0n backbone
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [16, 3, 2]]  # 0-P1/2
+  - [-1, 1, GhostV2, [16, 16, 3, 1, 'relu', False ,0]] # 1
+  - [-1, 1, GhostV2, [24, 48, 3, 2, 'relu', False ,1]] # 2
+  - [-1, 1, GhostV2, [24, 72, 3, 1, 'relu', False ,2]] # 3 p2
+  - [-1, 1, GhostV2, [40, 72, 5, 2, 'relu', True,3]]    # 4
+  - [-1, 1, GhostV2, [40, 120, 5, 1 ,'relu', True,4]]  # 5 p3
+  - [-1, 1, GhostV2, [80, 240, 3, 2, 'relu', False,5]]
+  - [-1, 1, GhostV2, [80, 200, 3, 1, 'relu', False,6]]
+  - [-1, 1, GhostV2, [80, 184, 3, 1, 'relu', False,7]]
+  - [-1, 1, GhostV2, [80, 184, 3, 1, 'relu', False,8]]
+  - [-1, 1, GhostV2, [112, 480, 3, 1,'relu', True,9]]
+  - [-1, 1, GhostV2, [112, 672, 3, 1,'relu', True,10]] # 11 p4
+  - [-1, 1, GhostV2, [160, 672,5, 2, 'relu', True,11]]
+  - [-1, 1, GhostV2, [160, 960,5, 1, 'relu', False,12]]
+  - [-1, 1, GhostV2, [160, 960,5, 1, 'relu', True,13]]
+  - [-1, 1, GhostV2, [160, 960,5, 1, 'relu', False,14]]
+  - [-1, 1, GhostV2, [160, 960,5, 1, 'relu', True,15]] # 16 p5
+
+# YOLOv8.0n head
+head:
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]
+  - [[-1, 11], 1, Concat, [1]]  # cat backbone P4
+  - [-1, 3, C2f, [512]]  # 19
+
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]
+  - [[-1, 5], 1, Concat, [1]]  # cat backbone P3
+  - [-1, 3, C2f, [256]]  # 22 (P3/8-small)
+
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 19], 1, Concat, [1]]  # cat head P4
+  - [-1, 3, C2f, [512]]  # 25 (P4/16-medium)
+
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 16], 1, Concat, [1]]  # cat head P5
+  - [-1, 3, C2f, [1024]]  # 28 (P5/32-large)
+
+  - [[22, 25, 28], 1, Detect, [nc]]  # Detect(P3, P4, P5)
