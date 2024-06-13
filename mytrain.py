@@ -4,15 +4,13 @@ from ultralytics import RTDETR
 # Load a model
 
 
-# 跑 yolov5 模型
+# 跑 yolov8 模型,这里更换对应 配置 yml 就行 。
 # Create a new YOLO model from scratch
-model = YOLO('ultralytics/cfg/models/v8/yolov8s_GAM_C2fDCN_WIOU_Dyhead.yaml')
+model = YOLO('ultralytics/cfg/models/v8/yolov8-biformer.yaml')
 model = YOLO('yolov8s.pt')
 
 # Train the model
 results = model.train(data='VisDrone.yaml')
-
-
 
 
 
