@@ -6,7 +6,7 @@
 
 
 ### ⭐简介
-本人硕士研究方向是目标检测，采用的模型是yolov8，数据集是VisDrone2019，适用于小目标航拍图像检测。结合了<a href="https://docs.ultralytics.com/">官方使用文档</a>和<a href="https://www.bilibili.com/video/BV1QC4y1R74t/?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click&vd_source=5fe50b1b35a25689fb0988c454fec5e0">b站岩学长</a>的视频讲解，教了如何更改模型，添加新模块到yolov8中，以及如何修改yaml配置文件。于是自己总结了 yolov8的训练仓库，后期大家可以随意添加不同的改进yaml配置文件进行模型的训练，觉得好的话可以点个star~
+本人硕士的研究方向是目标检测，采用的模型是yolov8，数据集是VisDrone2019，适用于小目标航拍图像检测。结合了<a href="https://docs.ultralytics.com/">官方使用文档</a>和<a href="https://www.bilibili.com/video/BV1QC4y1R74t/?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click&vd_source=5fe50b1b35a25689fb0988c454fec5e0">b站岩学长</a>的视频讲解，教了如何更改模型，添加新模块到yolov8中，以及如何修改yaml配置文件。于是自己总结了 yolov8的训练仓库，后期大家可以随意添加不同的改进yaml配置文件进行模型的训练，觉得好的话可以点个star~
 
 
 ### ⭐具体详解
